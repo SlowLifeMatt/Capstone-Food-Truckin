@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <header class="brand">Food Truckin' with Matty</header>
+        <h1>Add a truck in our directory!</h1>
+        <form action="/truck" method="POST">
+        <h2>Name:</h2> <input id="edit" type="text" name="name" /><br />
+        <h2>Image Link:</h2> <input id="edit" type="text" name="img" /><br />
+        <h2>Average food cost:</h2> <input id="edit" type="text" name="avgprice"/>
+        <h2>Link to site:</h2> <input id="edit" type="text" name="link" /><br />
+    
+        <h2><input type="submit" name="" value="Add a New Food Truck" /></h2>
+    </form>
+        <button><a href="/truck">Back to Homepage</a></button>
+    </div>
+    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <div>
+        <header>Food truckin' with Matty</header>
+        <div>
+            <ul>
+                <% Truck.forEach(Truck => { %>
+                    <li>
+                        <div>
+                            <h2><%= Truck.name %></h2>
+                            <a href="/truck/<%=Truck.id%>"><img class="home" src=<%= Truck.img %>></a>   
+                        </div>
+                    </li>
+                <% }) %>
+            </ul>
+    
+        </div>
+    </div>
+</body>
+</html>
