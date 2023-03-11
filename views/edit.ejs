@@ -10,7 +10,13 @@
     <div class="container">
         <header class="brand">Food Truckin' with Matty</header>
         <h1>Edit this truck in our directory!</h1>
-
+        <form action="/truck/<%=Truck.id%>?_method=PUT" method="POST">
+            <h2>Name:</h2> <input id="edit" type="text" name="name" value="<%=Truck.name%>"/><br />
+            <h2>Image Link:</h2> <input id="edit" type="text" name="img" value="<%=Truck.img%>"/><br />
+            <h2>Average food cost:</h2> <input id="edit" type="text" name="cost" value="<%=Truck.avgprice%>"/>
+            <h2>Link to site:</h2> <input id="edit" type="text" name="link" value="<%=Truck.link%>"/><br />
+            <h2><input type="submit" name="" value="Submit Changes" /></h2>
+        </form>
         <button><a href="/truck">Back to Homepage</a></button>
     </div>
     
