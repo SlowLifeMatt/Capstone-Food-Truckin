@@ -44,7 +44,7 @@ truckRouter.put("/:id", (req, res) => {
     { new: true },
     (err, updatedTruck) => {
       console.log(err);
-      res.redirect(`/bed/${req.params.id}`);
+      res.redirect(`/truck/${req.params.id}`);
     }
   );
 });

@@ -5,6 +5,23 @@
 </head>
 <body>
     <button><a href="/truck">Back to Homepage</a></button>
-
+    <div class="showContainer">
+        <h1> <%= Truck.name %></h1>
+        <h2>
+            <img class ="indexHome" src=<%= Truck.img %>>
+        </h2>
+        <h2>
+            Average Food Cost: <%= Truck.avgprice%>
+        </h2>
+        <h2 class="linkRoute">
+           <a href=<%= Truck.link%>> Link to site </a>
+        </h2>
+        <h2 class="links"><button><a href="/truck/<%=Truck.id%>/edit">EDIT</a></button></h2>
+        <h2 class="links">
+            <form action="/truck/<%= Truck.id %>?_method=DELETE" method="post">
+                <input type="submit" value="DELETE"  />
+        </h2>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
