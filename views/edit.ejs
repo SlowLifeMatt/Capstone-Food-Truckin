@@ -7,20 +7,36 @@
 
 
 <body>
-    <div class="container">
-        <header class="brand">Food Truckin' with Matty</header>
-        <h1>Edit this truck in our directory!</h1>
-        <form action="/truck/<%=Truck.id%>?_method=PUT" method="POST">
-            <h2>Name:</h2> <input id="edit" type="text" name="name" value="<%=Truck.name%>"/><br />
-            <h2>Image Link:</h2> <input id="edit" type="text" name="img" value="<%=Truck.img%>"/><br />
-            <h2>Average food cost:</h2> <input id="edit" type="text" name="cost" value="<%=Truck.avgprice%>"/>
-            <h2>Link to site:</h2> <input id="edit" type="text" name="link" value="<%=Truck.link%>"/><br />
-            <h2><input type="submit" name="" value="Submit Changes" /></h2>
+    <div class="row">
+        <form class="col s12" action="/truck/<%=Truck.id%>?_method=PUT" method="POST">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="edit" type="text" name="name" value="<%=Truck.name%>" class="validate">
+              <label for="name">Truck Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="edit" type="text" name="img" value="<%=Truck.img%>" class="validate">
+              <label for="img">Image Link</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s1">
+              <input id="edit" type="text" name="avgprice" value="<%=Truck.avgprice%>" class="validate">
+              <label for="avgprice">Average Price</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="edit" type="text" name="link" value="<%=Truck.link%>" class="validate">
+              <label for="link">Link to Food Truck website</label>
+            </div>
+          </div>
+          <h2>  <button class="btn waves-effect waves-light" type="submit" name="action" value="Submit Changes">Submit Changes
+            <i class="material-icons right">send</i>
+          </button></h2>
+          </div>
         </form>
-        <button><a href="/truck">Back to Homepage</a></button>
-    </div>
-    
-    </div>
+      </div>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
