@@ -16,11 +16,16 @@
     <div class="showContainer">
         <h1> <%= Truck.name %></h1>
         <h2>
-            <img class ="img" src=<%= Truck.img %>>
+            <img class ="img" src=<%= Truck.img %>
+
         </h2>
-        <h2>
-            Average Food Cost: <%= Truck.avgprice%>
-        </h2>
+        <h2><img class ="img" src=<%= Truck.img1 %></h2>
+        <h2><img class ="img" src=<%= Truck.img2 %></h2>
+        <h2><img class ="img" src=<%= Truck.img3 %></h2>
+       <h2>
+        Average Food Cost: <%= Truck.avgprice%>
+       </h2>
+   
         <h2 class="linkRoute">
            <a href=<%= Truck.link%> Link to site </a>
         </h2>
@@ -29,6 +34,7 @@
             <form action="/truck/<%= Truck.id %>?_method=DELETE" method="post">
                 <input type="submit" value="DELETE"  />
         </h2>
+        <h3><%= Truck.info %></h3>
     </div>
     <script type="text/javascript" src="js/materialize.min.js">
         document.addEventListener('DOMContentLoaded', function() {

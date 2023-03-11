@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const truckController = require("./controllers/trucks")
 
+
 require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 
