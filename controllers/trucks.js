@@ -10,7 +10,7 @@ require("dotenv").config();
 truckRouter.get("/seed", (req, res) => {
   Truck.deleteMany({}, (error, allTruck) => {});
   Truck.create(truckData, (error, data) => {
-    res.redirect("/truck");
+    res.redirect("/");
   });
 });
 
@@ -31,7 +31,7 @@ truckRouter.get("/new", (req, res) => {
 // DELETE
 truckRouter.delete("/:id", (req, res) => {
   Truck.findByIdAndRemove(req.params.id, (err, deletedTruck) => {
-    res.redirect("/truck");
+    res.redirect("/");
   });
 });
 // UPDATE
@@ -44,7 +44,7 @@ truckRouter.put("/:id", (req, res) => {
     { new: true },
     (err, updatedTruck) => {
       console.log(err);
-      res.redirect(`/truck/${req.params.id}`);
+      res.redirect(`/${req.params.id}`);
     }
   );
 });
@@ -53,7 +53,7 @@ truckRouter.put("/:id", (req, res) => {
 truckRouter.post("/", (req, res) => {
   req.body.completed = req.body.completed === "on" ? true : false;
   Truck.create(req.body, (error, createdTruck) => {
-    res.redirect("/truck");
+    res.redirect("/");
   });
 });
 
