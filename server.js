@@ -23,7 +23,7 @@ db.on("disconnected", () => console.log("mongo disconnected"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-app.use("/truck", truckController)
+app.use("/", truckController)
 app.use(express.static("public"));
 
 app.listen(PORT, () =>
