@@ -4,10 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const truckController = require("./controllers/trucks")
-if (process.env.NODE_ENV === 'production') { app.use(express.static(path.join(__dirname, 'client/build')), function (err) { if (err) { res.status(500).send(err) } }); app.get('*', (req, res) => { res.sendFile(path.join(__dirname, 'client', 'build', 'index.ejs'), function (err) { if (err) { res.status(500).send(err) } }) }); }
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.ejs'));
-});
+
 require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 
