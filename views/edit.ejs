@@ -11,7 +11,7 @@
 
 <body>
     <div class="row">
-        <form class="col s12" action="/truck/<%=Truck.id%>?_method=PUT" method="POST">
+        <form class="col s12" action="/<%=Truck.id%>?_method=PUT" method="POST">
           <div class="row">
             <div class="input-field col s6">
               <input id="edit" type="text" name="name" value="<%=Truck.name%>" class="validate">

@@ -29,9 +29,9 @@
         <h2 class="linkRoute">
            <a href=<%= Truck.link%> Link to site </a>
         </h2>
-        <h2 class="links"><button><a href="/truck/<%=Truck.id%>/edit">EDIT</a></button></h2>
+        <h2 class="links"><button><a href="/<%=Truck.id%>/edit">EDIT</a></button></h2>
         <h2 class="links">
-            <form action="/truck/<%= Truck.id %>?_method=DELETE" method="post">
+            <form action="/<%= Truck.id %>?_method=DELETE" method="post">
                 <input type="submit" value="DELETE"  />
         </h2>
         <h3><%= Truck.info %></h3>
