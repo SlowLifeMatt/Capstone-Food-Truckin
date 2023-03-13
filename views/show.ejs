@@ -4,37 +4,49 @@
     <%-include('./partials/head.ejs') %>
 </head>
   <style>
+
     .img{
         width:400px;
         height: 300px;
     }
+    .page-font{
+        font-size: 20px;
+        color: aqua;
+    }
+    .title {
+        color: aqua;
+    }
+    .food-image, .food-picture, .img{
+        display: inline-block;
+    }
     </style>
+
 
     
 <body>
     
-    <div class="showContainer">
-        <h1> <%= Truck.name %></h1>
+    <div class="card-content center">
+        <h1 class="title"> <%= Truck.name %></h1>
         <h2>
             <img class ="img" src=<%= Truck.img %>
 
         </h2>
-        <h2><img class ="img" src=<%= Truck.img1 %></h2>
-        <h2><img class ="img" src=<%= Truck.img2 %></h2>
-        <h2><img class ="img" src=<%= Truck.img3 %></h2>
-       <h2>
+        <h2 class="food-image"><ul ><img class ="img" src=<%= Truck.img1 %></ul></h2>
+        <h2 class="food-image"><ul ><img class ="img" src=<%= Truck.img2 %></ul></h2>
+        <h2 class="food-image"><ul ><img class ="img" src=<%= Truck.img3 %></ul></h2>
+       <h2 class="page-font">
         Average Food Cost: <%= Truck.avgprice%>
        </h2>
-   
+       <h3 class="page-font"><%= Truck.info %></h3>
         <h2 class="linkRoute">
-           <a href=<%= Truck.link%> Link to site </a>
+           <a href= <%= Truck.link%>> Link to site </a>
         </h2>
-        <h2 class="links"><button><a href="/<%=Truck.id%>/edit">EDIT</a></button></h2>
-        <h2 class="links">
-            <form action="/<%= Truck.id %>?_method=DELETE" method="post">
+       <a class="waves-effect waves-teal btn-flat" href="/<%=Truck.id%>/edit">Edit food truck</a>
+        <h2>
+            <form class="material-icons color: gray" action="/<%= Truck.id %>?_method=DELETE" method="post">delete
                 <input type="submit" value="DELETE"  />
         </h2>
-        <h3><%= Truck.info %></h3>
+       
     </div>
     <script type="text/javascript" src="js/materialize.min.js">
         document.addEventListener('DOMContentLoaded', function() {
